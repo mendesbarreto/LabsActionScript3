@@ -44,6 +44,11 @@ package com.pieceOfCake.events {
 		 */
 		public static const ON_SCENE_EXIT_APPLICATION_REQUEST:String = "onSceneExitApplicationRequest";
 		
+		/**
+		 * This container willl be the where the all scene will be added
+		 */
+		public static const ON_SCENES_LOAD_COMPLETE:String = "onSceneLoadComplete";
+		
 		public function SceneEvent(type:String, data:Object = null, bubbles:Boolean = false) 
 		{
 			super(type, bubbles, data);	

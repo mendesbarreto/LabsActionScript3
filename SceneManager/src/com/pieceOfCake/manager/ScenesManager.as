@@ -82,6 +82,11 @@ package com.pieceOfCake.manager {
 
 			m_sceneNumber++;
 			
+			scene.init();
+			
+			if(m_sceneNumber == m_scenes.length){
+				this.dispatchEvent(new SceneEvent(SceneEvent.ON_SCENES_LOAD_COMPLETE, this, false));
+			}
 		}
 		
 		private function onSceneRequestExit(event:SceneEvent):void
@@ -159,8 +164,7 @@ package com.pieceOfCake.manager {
 		}
 
 		public function start():void {
-			this.startScene(this.m_currentScene);
-			this.m_isUpdating = true;
+			this.startWithScene(this.m_currentScene.name);
 		}
 		
 		public function startWithScene(sceneName:String):void {

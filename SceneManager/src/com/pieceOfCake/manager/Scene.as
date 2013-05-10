@@ -8,7 +8,6 @@
 
 
 package com.pieceOfCake.manager {
-	import com.pieceOfCake.manager;
 	import com.pieceOfCake.events.SceneEvent;
 	
 	import starling.animation.IAnimatable;
@@ -25,7 +24,9 @@ package com.pieceOfCake.manager {
 		// PROPERTIES
 		///////////////////////
 		/**
+		 * 
 		 * This container willl be the where the all scene will be added
+		 * 
 		 */
 		protected var	m_asset:Sprite;
 		
@@ -33,7 +34,7 @@ package com.pieceOfCake.manager {
 		protected var m_juggler:Juggler;
 		
 		/**Controls the state of the scene, case the variable is true the scene will be updated **/
-		private var m_isUpdating:Boolean = false;
+		protected var m_isUpdating:Boolean = false;
 		
 		/***Show if the scene was initialized**/
 		private var m_isInitialized:Boolean = false;
@@ -41,16 +42,18 @@ package com.pieceOfCake.manager {
 		/**Show if the scene is making some change staff**/
 		protected var m_isChangeScene:Boolean = false;
 		
-		public function Scene() 
-		{
+		
+		public function Scene(){}
+		///////////////////////
+		// METHODS
+		///////////////////////
+		/**Function will be called always in the scene initialization**/
+		public function init():void{
 			m_juggler = new Juggler();
 			this.m_asset = new Sprite();
 			this.addChild(m_asset);
 		}
-	
-		///////////////////////
-		// METHODS
-		///////////////////////
+		
 		public function update(time:Number):void {
 			if(m_isUpdating){
 				m_juggler.advanceTime(time);
@@ -65,7 +68,6 @@ package com.pieceOfCake.manager {
 		public function getJugguler():Juggler{
 			return this.m_juggler;
 		}
-		
 		/**
 		 * Request to the Scene manager to change the current scene
 		 * 
