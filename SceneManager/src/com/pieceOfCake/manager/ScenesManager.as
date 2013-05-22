@@ -64,7 +64,6 @@ package com.pieceOfCake.manager {
 		///////////////////////
 		// METHODS
 		///////////////////////
-		
 		public function add(name:String, SceneClass:Class, position:Point = null):void {
 			var scene:Scene = new SceneClass();
 			scene.name = name;
@@ -72,6 +71,7 @@ package com.pieceOfCake.manager {
 			//Adding the events which will drive the application behavior
 			scene.addEventListener(SceneEvent.ON_CHANGE_SCENE_REQUEST, onSceneChangeRequest);
 			scene.addEventListener(SceneEvent.ON_SCENE_EXIT_APPLICATION_REQUEST, onSceneRequestExit);
+			scene.addEventListener(Event.CLOSE, onSceneRequestExit);
 			
 			this.m_container.addChild(scene);
 			this.m_scenes[m_sceneNumber] = scene;

@@ -79,6 +79,7 @@ package com.pieceOfCake.manager {
 			if(!m_isChangeScene){
 				m_isChangeScene = true;
 				if(name != "" && name != null){
+					var bool:Boolean = this.hasEventListener(SceneEvent.ON_CHANGE_SCENE_REQUEST);
 					this.dispatchEvent(new SceneEvent(SceneEvent.ON_CHANGE_SCENE_REQUEST, name));
 				}else{
 					throw new Error("The scene name could not be null");

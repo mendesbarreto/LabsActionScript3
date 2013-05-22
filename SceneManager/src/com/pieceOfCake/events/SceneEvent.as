@@ -29,7 +29,7 @@ package com.pieceOfCake.events {
 		/**
 		 * This container willl be the where the all scene will be added
 		 */
-		public static const ON_CHANGE_SCENE_REQUEST:String = "onChangeScene";
+		public static const ON_CHANGE_SCENE_REQUEST:String = "onChangeSceneRequest";
 		/**
 		 * This container willl be the where the all scene will be added
 		 */
