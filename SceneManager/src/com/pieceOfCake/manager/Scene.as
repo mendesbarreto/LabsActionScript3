@@ -136,5 +136,9 @@ package com.pieceOfCake.manager {
 			m_isInitialized = value;
 		}
 		
+		override public function dispose():void{
+			super.dispose();
+		}
+		
 	}
 }
