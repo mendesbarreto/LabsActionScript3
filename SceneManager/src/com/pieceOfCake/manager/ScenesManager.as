@@ -121,6 +121,7 @@ package com.pieceOfCake.manager {
 		/**Stops the scene process***/
 		public function stopScene(scene:Scene):void{
 			scene.visible = false;
+			trace("The scene:",scene.name,"visible is false!");
 			scene.stop();
 		}
 		

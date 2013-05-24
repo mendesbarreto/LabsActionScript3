@@ -42,7 +42,6 @@ package com.pieceOfCake.manager {
 		/**Show if the scene is making some change staff**/
 		protected var m_isChangeScene:Boolean = false;
 		
-		
 		public function Scene(){}
 		///////////////////////
 		// METHODS
@@ -54,8 +53,10 @@ package com.pieceOfCake.manager {
 			this.addChild(m_asset);
 		}
 		
-		public function update(time:Number):void {
-			if(m_isUpdating){
+		public function update(time:Number):void 
+		{
+			if(m_isUpdating)
+			{
 				m_juggler.advanceTime(time);
 			}
 		}
@@ -76,6 +77,7 @@ package com.pieceOfCake.manager {
 		 * @see com.pieceOfCake.manager.ScenesManager
 		 * **/
 		protected function changeScene(name:String):void{
+			//TODO caio douglas..qd do change scene pela segunda vez..esse m_isChangeScene eh TRUE..entao nao entra nessa funcao!!!
 			if(!m_isChangeScene){
 				m_isChangeScene = true;
 				if(name != "" && name != null){
