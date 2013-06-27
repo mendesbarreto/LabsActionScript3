@@ -9,7 +9,7 @@ package com.globo.sitio.mario
 	import com.globo.sitio.mario.system.SystemPriorities;
 	
 	import ash.core.Engine;
-	import ash.integration.starling.StarlingFrameTickProvider;
+	import ash.integration.starling.StarlingFixedTickProvider;
 	
 	import starling.core.Starling;
 	import starling.display.Sprite;
@@ -18,10 +18,9 @@ package com.globo.sitio.mario
 	public class MarioGame extends Sprite
 	{
 		private var engine:Engine;
-		private var tickProvider:StarlingFrameTickProvider;
+		private var tickProvider:StarlingFixedTickProvider;
 		private var keyPoll:KeyPoll;
 		private var entityBuilder:EntityBuilder;
-		
 		
 		public function MarioGame()
 		{
@@ -37,7 +36,7 @@ package com.globo.sitio.mario
 		private function start() : void
 		{
 			keyPoll = new KeyPoll(Starling.current.nativeStage);
-			tickProvider = new StarlingFrameTickProvider( Starling.current.juggler );
+			tickProvider = new StarlingFixedTickProvider( Starling.current.juggler, 60 );
 			tickProvider.add( engine.update );
 			tickProvider.start();
 			

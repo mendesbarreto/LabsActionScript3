@@ -59,8 +59,7 @@ package com.globo.sitio.mario.system
 					}
 				}
 				
-				trace(velocity);
-				position.SetX(position.GetX() + (velocity * time));
+				position.SetX(position.GetX() + (1));
 				//position.SetY(position.GetY() + (motion.GetVelocity().GetY() * time));
 				
 				motion.SetVelocityX(velocity);

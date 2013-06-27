@@ -11,6 +11,9 @@ package com.globo.sitio.mario
 		
 		public function Main()
 		{
+			var movi:movieMonitor = new movieMonitor();
+			this.addChild(movi);
+			
 			initialize();
 		}
 		
