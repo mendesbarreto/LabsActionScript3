@@ -7,7 +7,6 @@ package com.globo.sitio.mario.entity
 	import com.globo.sitio.mario.components.Motion;
 	import com.globo.sitio.mario.components.Player;
 	import com.globo.sitio.mario.components.Vector2D;
-	import com.globo.sitio.mario.nodes.DinamicBody;
 	
 	import flash.ui.Keyboard;
 	
