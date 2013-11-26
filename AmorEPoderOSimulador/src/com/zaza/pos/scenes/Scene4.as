@@ -20,6 +20,8 @@ package com.zaza.pos.scenes
 			
 			this.addChild( scene4Asset );
 			makeTweenOnContainer ( scene4Asset );
+			
+			scene4Asset.mc_tween.gotoAndPlay(2);
 			super.init();
 		}
 	}

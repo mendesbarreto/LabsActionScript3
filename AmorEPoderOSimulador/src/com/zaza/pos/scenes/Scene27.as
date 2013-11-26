@@ -3,6 +3,7 @@ package com.zaza.pos.scenes
 	import com.zaza.pos.Names;
 	
 	import flash.geom.Point;
+	import flash.text.TextFormat;
 
 	public class Scene27 extends Scene
 	{
@@ -24,6 +25,10 @@ package com.zaza.pos.scenes
 			makeTweenOnContainer ( sceneAsset );
 			
 			sceneAsset.mc_tween.name7.text = Names.name7.toUpperCase() + " exerce a relação";
+			
+			var format1:TextFormat = sceneAsset.mc_tween.name7.getTextFormat(  0 , Names.name7.length );
+			format1.color = 0xFFFFFF;
+			sceneAsset.mc_tween.name7.setTextFormat(format1, 0, Names.name7.length );
 			
 			super.init();
 		}

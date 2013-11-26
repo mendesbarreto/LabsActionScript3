@@ -12,7 +12,7 @@ package com.zaza.pos.scenes
 		
 		public function Scene6()
 		{
-			super( SceneName.SCREEN_7, SceneName.SCREEN_6 );
+			super( SceneName.SCREEN_7, SceneName.SCREEN_5 );
 		}
 		
 		override public function init():void

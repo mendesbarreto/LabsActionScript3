@@ -52,6 +52,7 @@ package com.zaza.pos.scenes
 				if( nextSceneName > 0)
 				{
 					isChangeScene = true;
+					this.removeEventListener( MouseEvent.CLICK , onMouseClickHandler );
 					this.onChangeSceneRequest.dispatch( nextSceneName );
 				}
 			}
@@ -64,6 +65,7 @@ package com.zaza.pos.scenes
 				if(previousSceneName > 0 )
 				{
 					isChangeScene = true;
+					this.removeEventListener( MouseEvent.CLICK , onMouseClickHandler );
 					this.onChangeSceneRequest.dispatch( previousSceneName );
 				}
 			}
